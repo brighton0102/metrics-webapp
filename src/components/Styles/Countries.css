@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-.country-card {
+.second-country-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,7 @@
   height: 100%;
   width: 100%;
   padding: 0.5rem;
+  text-decoration: none;
 }
 
 .country-flag {
@@ -83,6 +84,7 @@
 }
 
 .details-btn {
+  font-family: lato, sans-serif;
   position: absolute;
   display: flex;
   font-size: calc(20px + 2vmin);
@@ -94,6 +96,7 @@
 }
 
 .details-btn a {
+  font-family: lato, sans-serif;
   display: flex;
   color: white;
   text-decoration: none;
@@ -103,8 +106,8 @@
   color: #4063a7;
 }
 
-.country-card:nth-child(4n - 6),
-.country-card:nth-child(4n - 5) {
+.second-country-card:nth-child(4n - 6),
+.second-country-card:nth-child(4n - 5) {
   background-color: rgba(202, 69, 111, 1);
 }
 
@@ -125,12 +128,11 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* Apply background color to even and odd .country-card elements */
-  .country-card:nth-child(even) {
+  .second-country-card:nth-child(even) {
     background-color: rgba(202, 69, 111, 1);
   }
 
-  .country-card:nth-child(odd) {
+  .second-country-card:nth-child(odd) {
     background-color: rgba(202, 69, 111, 1);
   }
 

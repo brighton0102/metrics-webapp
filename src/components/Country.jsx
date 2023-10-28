@@ -1,11 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { useDispatch } from 'react-redux';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Link } from 'react-router-dom';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { HiOutlineArrowCircleRight } from 'react-icons/hi';
 import { getCountry } from '../Redux/CountryDetails/CountryDetailsSlice';
 
@@ -19,26 +15,26 @@ const Country = ({
   const dispatch = useDispatch();
 
   return (
-    <article className="country-card" key={id} data-testid="country-test">
-      <div className="country-flag">
-        <img src={flag.png} alt="Country Flag" />
-      </div>
-      <div className="country-info txtwhite">
-        <h2 className="country-name">
-          {commonName}
-          {' / '}
-          {cca2}
-        </h2>
-        <p>
-          {population}
-        </p>
-      </div>
-      <div className="details-btn">
-        <Link to={`/country/${cca2}`} onClick={() => dispatch(getCountry(commonName))}>
+    <Link className="second-country-card" to={`/country/${cca2}`} onClick={() => dispatch(getCountry(commonName))}>
+      <article className="country-card" key={id} data-testid="country-test">
+        <div className="country-flag">
+          <img src={flag.png} alt="Country Flag" />
+        </div>
+        <div className="country-info txtwhite">
+          <h2 className="country-name">
+            {commonName}
+            {' / '}
+            {cca2}
+          </h2>
+          <p>
+            {population}
+          </p>
+        </div>
+        <div className="details-btn">
           <HiOutlineArrowCircleRight className="txtwhite" />
-        </Link>
-      </div>
-    </article>
+        </div>
+      </article>
+    </Link>
   );
 };
 

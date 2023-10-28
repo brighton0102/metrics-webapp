@@ -11,9 +11,7 @@ import Europe from '../images/Europe.svg';
 import Oceania from '../images/Oceania.svg';
 
 const HomePage = () => {
-  const { isLoading, error, countries } = useSelector(
-    (state) => state.countries,
-  );
+  const { isLoading, error, countries } = useSelector((state) => state.countries);
   const [countriesData, setCountriesData] = useState(countries);
   const [selected, setSelected] = useState();
   const [map, setMap] = useState(world);
@@ -58,8 +56,8 @@ const HomePage = () => {
   };
   const filterCountries2 = (e) => {
     setCountriesData(
-      // eslint-disable-next-line max-len
-      countries.filter((country) => country.commonName.toLowerCase().includes(e.target.value.toLowerCase())),
+      countries.filter((country) => country.commonName.toLowerCase()
+        .includes(e.target.value.toLowerCase())),
     );
   };
   if (!isLoading) {

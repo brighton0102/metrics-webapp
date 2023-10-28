@@ -40,8 +40,6 @@
   height: auto;
   width: auto;
   padding: 1rem;
-
-  /* Remove align-items property to center the content */
 }
 
 .map-info h2 {
@@ -63,8 +61,6 @@
 .headline {
   display: flex;
   flex-direction: column;
-
-  /* Remove vertical-align property, it's not applicable */
   height: 8vh;
   padding: 0.2rem 1rem;
   align-items: flex-end;
